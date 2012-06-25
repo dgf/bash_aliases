@@ -4,5 +4,5 @@ PS1="
 \[\e[1;30m\]👤 \u 💻 \h:\l \[\e[0;34m\]📂 \w \
 \$(find . -maxdepth 1 -type d | tail -n +2 | wc -l)📁 \
 \$(find . -maxdepth 1 -type f | wc -l)📄 \$(ls -lah | head -1 | sed 's:total ::') 
-\[\e[0;35m\]\A⌚ \j⌛ \!👆 \#👈 \\$ \[\e[0m\]"
+\[\e[0;35m\]\A⌚ \j⌛ \!👆 \#👈 \\$ \[\e[0m\]\[\e]2;\u@\H \w\a"
 
