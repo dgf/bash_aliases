@@ -24,7 +24,7 @@ function last_result {
 }
 function clock {
   h=$(echo "obase=16;ibase=10; ${1:0:2} - 1" | bc)
-  m=$([[ "${1:3:2}" -gt 29 ]] && echo C || echo 0)
+  m=$([[ $((10#${1:3:2})) -gt 29 ]] && echo C || echo 0)
   c=$(echo "obase=16;ibase=16; F09F9590 + $h + $m" | bc)
   s=$([[ $2 = 'PM' ]] && echo ☼ || echo ☾)
   echo -en "$s$1\x${c:0:2}\x${c:2:2}\x${c:4:2}\x${c:6:2}"
